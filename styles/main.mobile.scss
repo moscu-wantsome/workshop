@@ -1,0 +1,112 @@
+@import "base";
+@import "mixins";
+
+@media (width < 620px) {
+  $outer-spacing: 20px 30px;
+
+  .main {
+    height: 100vh;
+    background-image: url("../images/orange.png");
+    padding: $outer-spacing;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    background-color: #4abdf2;
+
+    @include background-position;
+
+    .title {
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+      font-size: 42px;
+      font-family: $faunces-font-family;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: 3px;
+      word-spacing: 5px;
+    }
+
+    header {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    i {
+      font-size: 21px;
+    }
+
+    .arrow-down {
+      height: 150px;
+    }
+  }
+
+  .presentation-image {
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 10px;
+  }
+
+  .sub-title {
+    font-family: $faunces-font-family;
+    color: #24303e;
+    text-align: center;
+    font-size: 40px;
+    margin: 0;
+  }
+
+  .paragraph {
+    color: #808397;
+    // font-family: barlow;
+    text-align: center;
+    font-size: 21px;
+    line-height: 1.5;
+  }
+
+  .learn-more {
+    font-family: $faunces-font-family;
+    color: #24303e;
+    width: fit-content;
+    text-decoration: none;
+    position: relative;
+    font-size: 21px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      display: block;
+      background-color: #fad400;
+      height: 10px;
+      border-radius: 2px;
+      width: 110%;
+      position: absolute;
+      bottom: 0px;
+      left: -5%;
+      z-index: -1;
+    }
+
+    &--pink {
+      &::before {
+        background-color: pink;
+      }
+    }
+  }
+}
