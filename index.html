@@ -11,61 +11,82 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png" />
 
+    <link rel="stylesheet" href="./styles/main.css" />
     <link rel="stylesheet" href="./styles/main.mobile.css" />
+    <script>
+      localStorage.setItem("wantsome_workshop", "Sunnyside");
+    </script>
   </head>
   <body>
     <section class="main">
       <header>
         <img src="./images/logo.svg" alt="Sunyside logo" />
         <i class="fa-solid fa-bars"></i>
+        <nav class="navigation">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </nav>
       </header>
-      <h1 class="title">we are creatives</h1>
-      <img class="arrow-down" src="images/arrow.svg" alt="" />
+      <div class="main-content-container">
+        <h1 class="title" id="main-title">we are creatives</h1>
+        <img class="arrow-down" src="images/arrow.svg" alt="" />
+      </div>
     </section>
 
-    <section class="presentation-image">
-      <img src="./images/egg.png" alt="Egg photo" />
+    <section class="egg-text-container">
+      <section class="presentation-image">
+        <img src="./images/egg.png" alt="Egg photo" />
+      </section>
+
+      <section class="info-section">
+        <h2 class="sub-title">Transform your brand</h2>
+        <p class="paragraph">
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a class="learn-more" href="#">LEARN MORE</a>
+      </section>
     </section>
 
-    <section class="info-section">
-      <h2 class="sub-title">Transform your brand</h2>
-      <p class="paragraph">
-        We are a full-service creative agency specializing in helping brands
-        grow fast. Engage your clients through compelling visuals that do most
-        of the marketing for you.
-      </p>
-      <a class="learn-more" href="#">LEARN MORE</a>
+    <section class="cup-text-container">
+      <section class="presentation-image">
+        <img src="./images/cup.png" alt="Cup photo" />
+      </section>
+
+      <section class="info-section">
+        <h2 class="sub-title">Stand out to the right audience</h2>
+        <p class="paragraph">
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we'll build and extend
+          your brand in digital places.
+        </p>
+        <a class="learn-more learn-more--pink" href="#">LEARN MORE</a>
+      </section>
     </section>
 
-    <section class="presentation-image">
-      <img src="./images/cup.png" alt="Cup photo" />
-    </section>
+    <section class="cherry-clementine-container">
+      <section class="info-section fruit-container cherry">
+        <h2 class="fruit-title">Graphic Design</h2>
+        <p class="fruit-paragraph">
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients’ attention.
+        </p>
+      </section>
 
-    <section class="info-section">
-      <h2 class="sub-title">Stand out to the right audience</h2>
-      <p class="paragraph">
-        Using a collaborative formula of designers, researchers, photographers,
-        videographers, and copywriters, we'll build and extend your brand in
-        digital places.
-      </p>
-      <a class="learn-more learn-more--pink" href="#">LEARN MORE</a>
-    </section>
-
-    <section class="info-section fruit-container cherry">
-      <h2 class="fruit-title">Graphic Design</h2>
-      <p class="fruit-paragraph">
-        Great design makes you memorable. We deliver artwork that underscores
-        your brand message and captures potential clients’ attention.
-      </p>
-    </section>
-
-    <section class="info-section fruit-container clementine">
-      <h2 class="fruit-title">Photography</h2>
-      <p class="fruit-paragraph">
-        Increase your credibility by getting the most stunning, high-quality
-        photos that improve your business image.
-      </p>
+      <section class="info-section fruit-container clementine">
+        <h2 class="fruit-title">Photography</h2>
+        <p class="fruit-paragraph">
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
+      </section>
     </section>
 
     <section class="info-section testimonials-section">
@@ -169,7 +190,7 @@
       </div>
 
       <div class="footer-socials">
-        <a>
+        <a href="#facebook">
           <!-- Facebook logo -->
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -180,7 +201,7 @@
           </svg>
         </a>
 
-        <a>
+        <a href="#instagram">
           <!-- Instagram logo -->
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -191,7 +212,7 @@
           </svg>
         </a>
 
-        <a>
+        <a href="#twitter">
           <!-- Twitter logo -->
           <svg width="20" height="17" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -202,7 +223,7 @@
           </svg>
         </a>
 
-        <a>
+        <a href="#pinterest">
           <!-- Pinterest logo -->
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -214,5 +235,10 @@
         </a>
       </div>
     </section>
+
+    <script>
+      document.getElementById("main-title").innerHTML =
+        localStorage.getItem("wantsome_workshop");
+    </script>
   </body>
 </html>
